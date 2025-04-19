@@ -11,6 +11,11 @@ import kakaoRect from "../assets/icons/kakaoBtn/kakao_rect.svg"
 import kakaoCircle from "../assets/icons/kakaoBtn/kakao_circle.svg"
 import kakaoSquare from "../assets/icons/kakaoBtn/kakao_square.svg"
 
+
+import githubRect from "../assets/icons/githubBtn/github_rect.svg"
+import githubCircle from "../assets/icons/githubBtn/github_circle.svg"
+import githubSquare from "../assets/icons/githubBtn/github_square.svg"
+
 export function IconPath(provider, shape="rect"){
     const key = `${provider}_${shape}`
     const map = {
@@ -26,6 +31,12 @@ export function IconPath(provider, shape="rect"){
         kakao_rect: kakaoRect,
         kakao_circle: kakaoCircle,
         kakao_square: kakaoSquare,
+
+        github_rect: githubRect,
+        github_circle: githubCircle,
+        github_square: githubSquare,
+
+
     };
 
     return map[key] || null;

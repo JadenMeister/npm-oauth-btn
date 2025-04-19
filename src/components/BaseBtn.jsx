@@ -1,20 +1,20 @@
 import React from "react";
 import clsx from "clsx";
 
-export default function BaseButton({
-                                       onClick,
-                                       children,
-                                       shape = 'rect',
-                                       bgColor = 'transparent',
-                                       textColor = 'text-white',
-                                       fontSize = 'text-sm',
-                                       type = 'button',
-                                       disabled = false,
-                                   }) {
+export default function BaseBtn({
+                                    onClick,
+                                    children,
+                                    shape = 'rect',
+                                    bgColor = 'transparent',
+                                    hoverColor = '',
+                                    textColor = 'text-white',
+                                    fontSize = 'text-sm',
+                                    type = 'button',
+                                    radius = '',
+                                    disabled = false,
+                                    customClass = '',
+                                }) {
     const baseSize = 'h-12';
-
-
-
 
     const shapeClass = {
         rect: 'w-52 rounded-md',
@@ -23,20 +23,20 @@ export default function BaseButton({
     };
 
     const classes = clsx(
-        'flex items-center justify-center gap-2 px-3 cursor-pointer select-none',
+        'flex items-center justify-center gap-2 px-3 cursor-pointer select-none transition-all duration-200',
         shapeClass[shape],
         baseSize,
         bgColor,
+        hoverColor,
         textColor,
-        fontSize
+        fontSize,
+        radius,
+        customClass
     );
-
 
     return (
         <button type={type} className={classes} onClick={onClick} disabled={disabled}>
-    <span className="flex items-center justify-center gap-2">
-      {children}
-    </span>
+            {children}
         </button>
     );
 }

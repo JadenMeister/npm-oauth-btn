@@ -17,7 +17,6 @@ export default function GithubBtn({ radius, shape = "rect" }) {
     return (
         <BaseBtn onClick={handleClick} shape={shape} radius={radius} bgColor="bg-[#24292F]">
             {icon && <img src={icon} alt="GitHub Icon" className="w-5 h-5" />}
-            {shape === "rect" && <span className="text-white">Sign in with GitHub</span>}
         </BaseBtn>
     );
 }
