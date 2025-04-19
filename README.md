@@ -104,6 +104,12 @@ VITE_GITHUB_REDIRECT_URI=http://localhost:5173/auth/github/callback
 
 MIT
 
+---
+## 기여
+
+버그 제보, PR 환영합니다!
+패키지 이름은 oauth-btn, 레포는 [github-repo](https://github.com/JadenMeister/npm-oauth-btn)에서 확인
+
 
 
 ---ENGLISH---
@@ -215,5 +221,11 @@ VITE_GITHUB_REDIRECT_URI=http://localhost:5173/auth/github/callback
 
 MIT
 
+---
+
+## Contributing
+
+Bug reports and pull requests are welcome!
+The package name is oauth-btn, and the repository can be found here: [github-repo](https://github.com/JadenMeister/npm-oauth-btn)
 
 
