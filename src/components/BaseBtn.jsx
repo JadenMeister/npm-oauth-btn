@@ -5,13 +5,16 @@ export default function BaseButton({
                                        onClick,
                                        children,
                                        shape = 'rect',
-                                       bgColor = 'bg-black',
+                                       bgColor = 'transparent',
                                        textColor = 'text-white',
                                        fontSize = 'text-sm',
                                        type = 'button',
                                        disabled = false,
                                    }) {
     const baseSize = 'h-12';
+
+
+
 
     const shapeClass = {
         rect: 'w-52 rounded-md',
@@ -28,9 +31,12 @@ export default function BaseButton({
         fontSize
     );
 
+
     return (
         <button type={type} className={classes} onClick={onClick} disabled={disabled}>
-            {children}
+    <span className="flex items-center justify-center gap-2">
+      {children}
+    </span>
         </button>
     );
 }

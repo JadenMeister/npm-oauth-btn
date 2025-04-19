@@ -1,8 +1,8 @@
 import React from "react";
 import BaseBtn from "./BaseBtn.jsx";
-import { getIconPath } from "../utils/getIconPath.js";
+import { IconPath } from "../utils/IconPath.js";
 
-export default function GithubObj({ radius, shape = "rect" }) {
+export default function GithubBtn({ radius, shape = "rect" }) {
     const handleClick = () => {
         const clientId = import.meta.env.VITE_GITHUB_CLIENT_ID;
         const redirectUri = import.meta.env.VITE_GITHUB_REDIRECT_URI;
@@ -12,7 +12,7 @@ export default function GithubObj({ radius, shape = "rect" }) {
         window.location.href = url;
     };
 
-    const icon = getIconPath("github", shape);
+    const icon = IconPath("github", shape);
 
     return (
         <BaseBtn onClick={handleClick} shape={shape} radius={radius} bgColor="bg-[#24292F]">
