@@ -1,7 +1,7 @@
 {
   "name": "oauth-btn",
   "private": false,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "main": "./dist/oauth-btn.cjs.js",
   "module": "./dist/oauth-btn.es.js",
@@ -40,5 +40,6 @@
     "tailwindcss": "^4.1.4",
     "vite": "^6.3.2"
   },
-  "author": "JadenMeister <error10901@gmail.com> (https://github.com/JadenMeister)"
+  "author": "JadenMeister <error10901@gmail.com> (https://github.com/JadenMeister)",
+  "license": "MIT"
 }
