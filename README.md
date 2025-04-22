@@ -13,10 +13,6 @@ Tailwind 기반 + 커스터마이징 가능한 React 컴포넌트
 ```bash
 npm install oauth-btn
 ```
-또는
-```bash
-yarn add oauth-btn
-```
 
 ---
 

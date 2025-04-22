@@ -5,6 +5,7 @@
   "type": "module",
   "main": "./dist/oauth-btn.cjs.js",
   "module": "./dist/oauth-btn.es.js",
+  "homepage": "https://github.com/JadenMeister/npm-oauth-btn",
   "exports": {
     ".": {
       "import": "./dist/oauth-btn.es.js",
