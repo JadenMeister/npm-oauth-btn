@@ -11,6 +11,10 @@ import kakaoRect from "../assets/icons/kakaoBtn/kakao_rect.svg?url"
 import kakaoCircle from "../assets/icons/kakaoBtn/kakao_circle.svg?url"
 import kakaoSquare from "../assets/icons/kakaoBtn/kakao_square.svg?url"
 
+import naverRect from "../assets/icons/naverBtn/naver_rect.png?url"
+import naverCircle from "../assets/icons/naverBtn/naver_circle.png?url"
+import naverSquare from "../assets/icons/naverBtn/naver_square.png?url"
+
 export function IconPath(provider, shape="rect"){
     const key = `${provider}_${shape}`
     const map = {
