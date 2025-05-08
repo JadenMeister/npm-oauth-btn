@@ -13,11 +13,11 @@ export default function GithubBtn({ radius, shape = "rect" }) {
     };
 
     const icon = IconPath("github", shape);
-    console.log('ICON:', icon, typeof icon);
+    console.log('icon:', icon, 'typeof:', typeof icon);
 
     return (
         <BaseBtn onClick={handleClick} shape={shape} radius={radius} bgColor="bg-[#24292F]">
-            {icon && <img src={icon} alt="GitHub Icon" className="w-5 h-5" />}
+            {icon && <img src={icon?.default || icon} alt="GitHub Icon" className="w-5 h-5" />}
         </BaseBtn>
     );
 }

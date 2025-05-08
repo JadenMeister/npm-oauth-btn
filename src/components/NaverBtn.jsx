@@ -18,15 +18,15 @@ export default function NaverBtn({ radius, shape = "rect" }) {
     return (
         <BaseBtn onClick={handleClick} shape={shape} radius={radius} bgColor="bg-transparent">
             {icon && (
-                <img
-                    src={icon}
-                    alt="naver"
-                    style={{
-                        ...size,
-                        objectFit: "contain",
-                        display: "block",
-                    }}
-                />
+              <img
+                src={icon?.default || icon}
+                alt="naver"
+                style={{
+                    ...size,
+                    objectFit: "contain",
+                    display: "block",
+                }}
+              />
             )}
         </BaseBtn>
     );

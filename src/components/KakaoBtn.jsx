@@ -15,7 +15,7 @@ export default function KakaoBtn({ radius, shape = "rect" }) {
 
     return (
         <BaseBtn onClick={handleClick} shape={shape} radius={radius} bgColor="bg-[#FEE500]">
-            {icon && <img src={icon} alt="Kakao Icon" className="w-5 h-5" />}
+            {icon && <img src={icon?.default || icon} alt="Kakao Icon" className="w-5 h-5" />}
 
         </BaseBtn>
     );

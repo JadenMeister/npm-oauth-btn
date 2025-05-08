@@ -15,7 +15,7 @@ export default function GoogleBtn({ radius, shape = "rect" }) {
 
     return (
         <BaseBtn onClick={handleClick} shape={shape} radius={radius} bgColor="bg-[#4285F4]">
-            {icon && <img src={icon} alt="Google Icon" className="w-5 h-5" />}
+            {icon && <img src={icon?.default || icon} alt="Google Icon" className="w-5 h-5" />}
 
         </BaseBtn>
     );
