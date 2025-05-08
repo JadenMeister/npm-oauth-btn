@@ -2,12 +2,10 @@ import React from "react";
 import BaseBtn from "./BaseBtn.jsx";
 import { IconPath } from "../utils/IconPath.js";
 
-export default function KakaoBtn({ radius, shape = "rect" }) {
+export default function KakaoBtn({ radius, shape = "rect", clientId, redirectUri }) {
     const handleClick = () => {
-        const clientId = import.meta.env.VITE_KAKAO_CLIENT_ID;
-        const redirectUri = import.meta.env.VITE_KAKAO_REDIRECT_URI;
-        const scope = "profile";
-        const url = `https://kauth.kakao.com/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}`;
+
+        const url = `https://kauth.kakao.com/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code`;
         window.location.href = url;
     };
 
@@ -15,8 +13,9 @@ export default function KakaoBtn({ radius, shape = "rect" }) {
 
     return (
         <BaseBtn onClick={handleClick} shape={shape} radius={radius} bgColor="bg-[#FEE500]">
-            {icon && <img src={icon} alt="Kakao Icon" className="w-5 h-5" />}
-
+            {typeof icon === "string" ? (
+                <img src={icon} alt="Kakao Icon" className="w-5 h-5" />
+            ) : null}
         </BaseBtn>
     );
 }

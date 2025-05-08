@@ -1,27 +1,23 @@
-# 개발 전용 소스 제외
-src/
-
-
-# 개발용 진입점 제외
+# 개발용 진입점 및 전용 소스 제외
 app.jsx
 main.jsx
 index.html
 
-# 환경 파일
+# 환경 설정 파일
 .env
 .env.*
 
-# 설정 및 기타
+# 설정 파일들
 vite.config.js
 .eslintrc*
-.gitignore
 .npmignore
+.gitignore
 
-# 테스트 및 문서
+# 테스트 관련
 README.md
 *.test.js
 __tests__/
 
-# 기타 불필요한 것들
+# 기타
 *.log
 node_modules/

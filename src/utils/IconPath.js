@@ -38,5 +38,10 @@ export function IconPath(provider, shape="rect"){
 
     };
 
-    return map[key] || null;
+    const icon = map[key];
+
+    // 항상 문자열 반환: default 있으면 사용, 없으면 그냥 반환
+    return typeof icon === "object" && icon !== null && "default" in icon
+        ? icon.default
+        : icon || null;
 }
