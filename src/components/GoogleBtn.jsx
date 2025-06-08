@@ -9,8 +9,7 @@ export default function GoogleBtn({ radius, shape = "rect", clientId, redirectUr
             return;
         }
 
-        const scope = "profile email";
-        const url = `https://accounts.google.com/o/oauth2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${encodeURIComponent(scope)}&response_type=code`;
+        const url = `https://accounts.google.com/o/oauth2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code`;
         window.location.href = url;
     };
 
