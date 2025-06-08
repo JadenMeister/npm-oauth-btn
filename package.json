@@ -1,7 +1,7 @@
 {
   "name": "oauth-btn",
   "private": false,
-  "version": "1.0.24",
+  "version": "1.0.25",
   "type": "module",
   "main": "./dist/oauth-btn.cjs.js",
   "module": "./dist/oauth-btn.es.js",
