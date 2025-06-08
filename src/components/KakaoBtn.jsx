@@ -4,8 +4,8 @@ import { IconPath } from "../utils/IconPath.js";
 
 export default function KakaoBtn({ radius, shape = "rect", clientId, redirectUri }) {
     const handleClick = () => {
-
-        const url = `https://kauth.kakao.com/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code`;
+        const scope = "profile";
+        const url = `https://kauth.kakao.com/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}`;
         window.location.href = url;
     };
 
@@ -13,9 +13,7 @@ export default function KakaoBtn({ radius, shape = "rect", clientId, redirectUri
 
     return (
         <BaseBtn onClick={handleClick} shape={shape} radius={radius} bgColor="bg-[#FEE500]">
-            {typeof icon === "string" ? (
-                <img src={icon} alt="Kakao Icon" className="w-5 h-5" />
-            ) : null}
+            {icon && <img src={icon?.default || icon} alt="Kakao Icon" className="w-5 h-5" />}
         </BaseBtn>
     );
 }

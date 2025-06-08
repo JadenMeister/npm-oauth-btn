@@ -8,6 +8,8 @@ const __dirname = path.dirname(__filename)
 
 export default defineConfig({
   plugins: [react()],
+  assetsInclude: ['**/*.svg', '**/*.png'],
+
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.js'),
